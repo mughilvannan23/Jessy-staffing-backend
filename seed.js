@@ -19,7 +19,7 @@ const connectDB = async () => {
     console.error('DB Connection error during seed:', err);
     process.exit(1);
   }
-};
+}; 
 
 const seedData = async () => {
   await connectDB();
