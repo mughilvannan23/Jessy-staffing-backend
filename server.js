@@ -33,7 +33,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Apex Staffing & HR Solutions API is running smoothly.' });
+  res.json({ status: 'OK', message: 'Jessy Staffing & HR Solutions API is running smoothly.' });
 });
 
 // Mounting API Endpoints

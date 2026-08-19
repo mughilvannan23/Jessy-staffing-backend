@@ -22,7 +22,7 @@ const jobSchema = new mongoose.Schema(
     expiryDate: { type: Date },
     isFeatured: { type: Boolean, default: false },
     companyImage: { type: String, default: '' },
-    companyName: { type: String, default: 'Apex Global Staffing' },
+    companyName: { type: String, default: 'Jessy Global Staffing' },
     publishedDate: { type: Date, default: Date.now }
   },
   { timestamps: true }

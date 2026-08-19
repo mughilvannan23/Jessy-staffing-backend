@@ -153,7 +153,7 @@ const createJob = async (req, res, next) => {
       expiryDate: expiryDate ? new Date(expiryDate) : null,
       isFeatured: isFeatured === 'true' || isFeatured === true,
       companyImage,
-      companyName: companyName || 'Apex Global Staffing'
+      companyName: companyName || 'Jessy Global Staffing'
     });
 
     const createdJob = await job.save();

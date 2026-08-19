@@ -49,13 +49,13 @@ const seedData = async () => {
 
     // 2. Create Default Settings
     await Settings.create({
-      siteName: 'Apex Global Staffing & HR Solutions',
+      siteName: 'Jessy Global Staffing & HR Solutions',
       tagline: 'Empowering Enterprises with World-Class Talent',
-      contactEmail: 'contact@apexstaffing.com',
+      contactEmail: 'contact@jessystaffing.com',
       contactPhone: '+1 (800) 555-2739',
       address: '100 Enterprise Boulevard, Suite 500, Financial District, NY 10005',
       whatsappNumber: '+18005552739',
-      metaTitle: 'Apex Global Staffing & HR Solutions | International Talent Acquisition',
+      metaTitle: 'Jessy Global Staffing & HR Solutions | International Talent Acquisition',
       metaDescription: 'Leading international staffing, healthcare, security, corporate HR outsourcing, and school staffing solutions.'
     });
 
