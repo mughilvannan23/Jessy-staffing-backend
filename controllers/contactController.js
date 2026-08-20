@@ -6,15 +6,15 @@ const { processFileUpload } = require('../middlewares/uploadMiddleware');
 const submitEnquiry = async (req, res, next) => {
   try {
     const { name, phone, email, subject, message } = req.body;
-    if (!name || !email || !subject || !message) {
-      return res.status(400).json({ success: false, message: 'Name, email, subject, and message are required' });
+    if (!name || !subject || !message) {
+      return res.status(400).json({ success: false, message: 'Name, subject, and message are required' });
     }
 
     const contact = new Contact({
       type: 'contact',
       name,
-      phone: phone || '',
-      email,
+      phone: phone || 'N/A',
+      email: email || 'N/A',
       subject,
       message,
       status: 'unread'
