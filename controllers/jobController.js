@@ -23,7 +23,18 @@ const getPublicJobs = async (req, res, next) => {
     }
 
     if (location && location !== 'All') {
-      query.location = { $regex: location, $options: 'i' };
+      const searchTokens = location
+        .replace(/[()]/g, ' ')
+        .split(/\s+/)
+        .map(s => s.trim())
+        .filter(s => s.length > 0)
+        .map(s => s.replace(/[.*+?^${}|[\]\\]/g, '\\$&'));
+
+      if (searchTokens.length > 1) {
+        query.location = { $regex: searchTokens.join('|'), $options: 'i' };
+      } else if (searchTokens.length === 1) {
+        query.location = { $regex: searchTokens[0], $options: 'i' };
+      }
     }
 
     if (employmentType && employmentType !== 'All') {
